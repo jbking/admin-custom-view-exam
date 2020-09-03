@@ -1,0 +1,18 @@
+<html lang="en">
+  <head>
+  </head>
+  <body>
+{% if sent %}
+    <p>sent message</p>
+{% endif %}
+    <form method="post">
+      {% csrf_token %}
+      <div>
+        <textarea name="message" placeholder="write message"></textarea>
+      </div>
+      <div>
+        <input type="submit" value="Send message"/>
+      </div>
+    </form>
+  </body>
+</html>
